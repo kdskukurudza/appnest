@@ -58,6 +58,31 @@ p {
     p {
       font-size: 1rem; } }
 
+@media screen and (min-width: 320px) {
+  .button-top {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 140px;
+    right: 8px;
+    z-index: 100;
+    width: 51px;
+    height: 51px;
+    border-radius: 50%;
+    background: #00cff1;
+    font-size: 1.5rem;
+    color: #fefefe;
+    text-decoration: none; }
+    .button-top:hover {
+      text-decoration: none;
+      color: #fefefe;
+      cursor: pointer; } }
+
+@media screen and (min-width: 1100px) {
+  .button-top {
+    right: 50px; } }
+
 .header {
   position: relative;
   background-image: url("../img/abstract-astronomy.jpg");
@@ -547,7 +572,7 @@ p {
   .features__img--phone:nth-child(1) {
     max-width: 184px;
     position: absolute;
-    right: -48px;
+    right: 16px;
     bottom: 30px;
     z-index: 2; }
   .features__img--phone:nth-child(2) {
@@ -606,14 +631,14 @@ p {
   .features__title {
     font-size: 2rem;
     color: #282828;
-    text-transform: capitalize; } }
-
-@media screen and (min-width: 768px) {
-  .features__title {
+    text-transform: capitalize;
+    white-space: nowrap;
+    margin: auto;
     text-align: center; } }
 
 @media screen and (min-width: 1024px) {
   .features__title {
+    white-space: normal;
     text-align: left; } }
 
 .features__title--blue {
@@ -628,10 +653,7 @@ p {
 @media screen and (min-width: 320px) {
   .features__subtitle {
     margin: 20px 0 0;
-    line-height: 1.6; } }
-
-@media screen and (min-width: 768px) {
-  .features__subtitle {
+    line-height: 1.6;
     text-align: center; } }
 
 @media screen and (min-width: 1024px) {
@@ -1123,7 +1145,13 @@ p {
     position: relative;
     margin: 40px auto 0;
     padding: 39px 46px 37px;
-    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2); } }
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2); }
+    .pricing__item:hover {
+      box-shadow: 0px 30px 60px 0 rgba(0, 0, 0, 0.05); }
+      .pricing__item:hover .pricing__btn {
+        background: #24c657; }
+      .pricing__item:hover .pricing__price {
+        color: #24c657; } }
 
 @media screen and (min-width: 768px) {
   .pricing__item p {
@@ -1133,13 +1161,7 @@ p {
   .pricing__item {
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2);
     margin: 80px 30px 0;
-    padding: 78px 46px 74px; }
-    .pricing__item:hover {
-      box-shadow: 0px 30px 60px 0 rgba(0, 0, 0, 0.05); }
-      .pricing__item:hover .pricing__btn {
-        background: #24c657; }
-      .pricing__item:hover .pricing__price {
-        color: #24c657; } }
+    padding: 78px 46px 74px; } }
 
 @media screen and (min-width: 1100px) {
   .pricing__item {
@@ -1169,7 +1191,8 @@ p {
 @media screen and (min-width: 320px) {
   .pricing__btn {
     position: absolute;
-    left: 25%;
+    left: 0;
+    right: 0;
     bottom: -5%;
     font-size: 0.75rem;
     font-weight: 600;
@@ -1180,32 +1203,16 @@ p {
     background: #00cff1;
     border: none;
     border-radius: 30px;
-    box-shadow: 0px 30px 60px 0 rgba(0, 0, 0, 0.05); }
+    box-shadow: 0px 30px 60px 0 rgba(0, 0, 0, 0.05);
+    margin: auto; }
     .pricing__btn:hover {
       background: #24c657;
       cursor: pointer; } }
 
-@media screen and (min-width: 320px) {
-  .pricing__btn {
-    left: 27%; } }
-
-@media screen and (min-width: 425px) {
-  .pricing__btn {
-    left: 30%; } }
-
-@media screen and (min-width: 768px) {
-  .pricing__btn {
-    left: 35%; } }
-
 @media screen and (min-width: 1024px) {
   .pricing__btn {
     padding: 24px 32px;
-    left: 19%;
     font-size: 1rem; } }
-
-@media screen and (min-width: 1100px) {
-  .pricing__btn {
-    left: 24%; } }
 
 @media screen and (min-width: 320px) {
   .download {
@@ -1418,7 +1425,7 @@ p {
 
 @media screen and (min-width: 768px) {
   .download__button {
-    margin: 30px 0 0; } }
+    margin: 30px 10px 0; } }
 
 @media screen and (min-width: 1024px) {
   .download__button {
@@ -1671,7 +1678,8 @@ p {
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2); }
     .main__post:hover {
       box-shadow: 0px 30px 60px 0 rgba(0, 0, 0, 0.05); }
-      .main__post:hover .main__title, .main__post:hover .main__more {
+      .main__post:hover .main__title,
+      .main__post:hover .main__more {
         color: #00cff1; } }
 
 @media screen and (min-width: 1024px) {
